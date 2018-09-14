@@ -16,7 +16,7 @@ MAIN     CSECT                                                          00150000
          USING MAIN,15                                                  00160007
          L     1,FIRST       LOAD 105 INTO R1                           00170005
          L     2,SECND       LOAD 39 INTO R2                            00180005
-         SR    2,1           SUBTRACT R2 AND R1                         00180105
+         SR    1,2           SUBTRACT R2 AND R1                         00180105
          ST    2,ANSWER1     STORE RESULT IN ANSWER1                    00181005
          L     3,FIRST       NEW REGISTER TO USE FOR MATHS              00182005
          L     4,SECND       NEW REGISTER TO USE FOR MATHS              00183005
