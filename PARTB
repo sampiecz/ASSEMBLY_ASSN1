@@ -1,0 +1,34 @@
+//KC03O901 JOB ,'SAM',MSGCLASS=H                                        00010000
+//STEP1 EXEC PGM=ASSIST                                                 00020000
+//STEPLIB DD DSN=KC02293.ASSIST.LOADLIB,DISP=SHR                        00030000
+//SYSPRINT DD SYSOUT=*                                                  00040000
+//SYSIN DD *                                                            00050000
+*********************************************                           00060000
+* ASSIGNMENT 1 - PART B                                                 00070000
+*                                                                       00080000
+* NAME:    SAMUEL PIECZ                                                 00090000
+*                                                                       00100000
+* REGISTER USAGE                                                        00110000
+*                                                                       00120000
+*                                                                       00130000
+*********************************************                           00140000
+MAIN     CSECT                                                          00150000
+         USING MAIN,15                                                  00160007
+         L     1,FIRST       LOAD 105 INTO R1                           00170005
+         L     2,SECND       LOAD 39 INTO R2                            00180005
+         SR    2,1           SUBTRACT R2 AND R1                         00180105
+         ST    2,ANSWER1     STORE RESULT IN ANSWER1                    00181005
+         L     3,FIRST       NEW REGISTER TO USE FOR MATHS              00182005
+         L     4,SECND       NEW REGISTER TO USE FOR MATHS              00183005
+         A     4,3           ADD R4 AND R3                              00184005
+         ST    4,ANSWER2     STORE RESULT IN ANSWER2                    00185005
+         XDUMP ANSWER1,8     DUMP ANSWER1                               00190005
+         XDUMP ANSWER2,8     DUMP ANSWER2                               00191005
+         BR    14            STOP PROGRAM                               00200005
+FIRST    DC    F'105'        INITIALIZE VAR                             00203006
+SECND    DC    F'39'         INITIALIZE VAR                             00204006
+ANSWER1  DS    F             CREATE VAR                                 00205005
+ANSWER2  DS    F             CREATE VAR                                 00206005
+         END   MAIN                                                     00210007
+/*                                                                      00220000
+//                                                                      00230000
