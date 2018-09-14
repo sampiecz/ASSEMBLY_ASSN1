@@ -14,16 +14,16 @@
 *********************************************                           00140000
 MAIN     CSECT                                                          00150000
          USING MAIN,15                                                  00160000
-         L     1,FIRST                                                  00163008
-         L     2,SECND                                                  00164008
-         SR    2,1                                                      00165010
-         L     3,FIRST                                                  00166008
-         L     4,SECND                                                  00167008
-         AR    4,3                                                      00168010
-         XDUMP                                                          00168112
-         BR    14                                                       00169009
-FIRST    DS    F'105'                                                   00170011
-SECND    DS    F'39'                                                    00180011
+         L     1,FIRST       LOAD REGISTER WITH FULLWORD                00163008
+         L     2,SECND       LOAD REGISTER TWO WITH FULLWORD            00164008
+         SR    2,1           SUBTRACT REGISTERS ONE AND TWO             00165010
+         L     3,FIRST       LOAD REGISTER THREE WITH FULLWORD          00166008
+         L     4,SECND       LOAD REGISTER FOUR WITH FULLWORD           00167008
+         AR    4,3           ADD REGISTERS                              00168010
+         XDUMP               DUMP RESULTS                               00168112
+         BR    14            STOP PROGRAM                               00169009
+FIRST    DS    F'105'        INITIALIZE FULLWORD AND LABEL              00170011
+SECND    DS    F'39'         INITIALIZE FULLWORD AND LABEL              00180011
          END   MAIN                                                     00210000
 /*                                                                      00220002
 //                                                                      00230001
