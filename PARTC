@@ -21,8 +21,8 @@ MAIN     CSECT                                                          00140000
          L     4,48(0,15)    LOAD SECND IN REGISTER FOUR                00183003
          AR    4,3           ADD REGISTERS FOUR AND THREE               00184001
          ST    4,56(0,15)    STORE SUM IN ANSWER2                       00185003
-         XDUMP 52(0,15),8    DUMP ANSWER1                               00190003
-         XDUMP 56(0,15),8    DUMP ANSWER2                               00200003
+         XDUMP 52(0,15),4    DUMP ANSWER1                               00190003
+         XDUMP 56(0,15),4    DUMP ANSWER2                               00200003
          BR    14            ENDPROG                                    00230000
 FIRST    DC    F'105'        INITIALIZE FULLWORD                        00240001
 SECND    DC    F'39'         INITIALIZE FULLWORD                        00250001
